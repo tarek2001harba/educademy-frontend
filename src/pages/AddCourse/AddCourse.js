@@ -29,8 +29,8 @@ const AddCourse = () => {
                 "description" : chapterDesc.value
             }]
         )
-        chapterTitle.value = ""
-        chapterDesc.value = ""
+        // chapterTitle.value = ""
+        // chapterDesc.value = ""
     }
     const addLesson = () => {
         const lessonTitle = document.querySelector("#lesson-title")
@@ -48,9 +48,6 @@ const AddCourse = () => {
             "content" : lessonContent.value
             }]
         )
-        lessonTitle.value = ""
-        lessonVideo.value = ""
-        lessonContent.value = ""
     }
     const submit = () =>{
         const langSelect = document.querySelector("#course-title");

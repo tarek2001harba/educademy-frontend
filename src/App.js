@@ -44,7 +44,7 @@ function App() {
             <Contact />
             <Footer />
           </Route>
-          <Route exact path="/registeration/sign-in">
+          <Route path="/registeration">
             <Registeration />
           </Route>
           <Route exact path="/course">

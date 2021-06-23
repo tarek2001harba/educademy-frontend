@@ -1,40 +1,38 @@
 import React from 'react'
 import Button from '../../components/Button'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+
+//componenets
 import Pagination from '../../components/Pagination'
+import Field from '../../components/Field'
+
+//css
 import './reg.css'
 const Registeration = () => {
     return (
         <div className="reg">
             <div className="reg__pagination-container">
-                <Pagination sections={["Sign In", "Sign Up"]}></Pagination>
+                <Pagination sections={["Sign In", "Sign Up"]}/>
             </div>
             <Switch>
-                <Route path="/registeration/sign-in" exact>
+                <Route path="/registeration/sign-in">
                     <form className="reg__form" action="">
                         <h4 className="reg__title">Sign In</h4>
-                        <p>E-mail:</p>
-                        <input type="text" name="email"/>
-                        <p>Password:</p>
-                        <input type="text" name="pwd" />
+                        <Field id="sigin-email" fieldName="E-mail" />
+                        <Field id="sigin-pwd" fieldName="Password" last={true}/>                        
                         <Button type="filled" width="100%" text="Sign In"/>
                     </form>
                 </Route>
-                <Route path="/registeration/sign-up" exact>
+                <Route path="/registeration/sign-up">
                     <form className="reg__form" action="">
                         <h4 className="reg__title">Sign Up</h4>
-                        <p>First Name:</p>
-                        <input type="text" name="fname"/>
-                        <p>Last Name:</p>
-                        <input type="text" name="lname"/>
-                        <p>Country:</p>
-                        <input type="text" name="country"/>
-                        <p>Address:</p>
-                        <input type="text" name="country"/>
-                        <p>E-mail:</p>
-                        <input type="text" name="email"/>
-                        <p>Password:</p>
-                        <input type="text" name="pwd" />
+                        <Field id="signup-fname" fieldName="First Name" />
+                        <Field id="signup-lanme" fieldName="Last Name" />
+                        <Field id="signup-country" fieldName="Country" />
+                        <Field id="signup-adrs" fieldName="Address" />
+                        <Field id="signup-email" fieldName="E-mail" />
+                        <Field id="signup-pwd" fieldName="Password" />
+                        <Field id="signup-type" fieldName="Account Type" inputType="select" options={["Teacher", "Student"]} last={true}/>
                         <Button type="filled" width="100%" text="Sign Up"/>
                     </form>
                 </Route>
